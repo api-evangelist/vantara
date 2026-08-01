@@ -1,0 +1,34 @@
+generated: '2026-07-21'
+method: searched
+source: well-known probes + https://docs.getmilana.ai
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: 'RFC 8414 authorization-server metadata at https://app.getmilana.ai/.well-known/oauth-authorization-server (authorization_code + refresh_token grants)'
+  - id: rfc8414-authorization-server-metadata
+    conforms: true
+    evidence: well-known/vantara-oauth-authorization-server.json served with issuer https://clerk.getmilana.ai
+  - id: pkce-rfc7636
+    conforms: true
+    evidence: code_challenge_methods_supported [S256] in authorization-server metadata
+  - id: rfc7591-dynamic-client-registration
+    conforms: true
+    evidence: registration_endpoint https://clerk.getmilana.ai/oauth/register in authorization-server metadata
+  - id: oidc
+    conforms: true
+    evidence: openid/profile/email scopes, RS256 id_token signing, and standard claims in authorization-server metadata (Clerk issuer); no /.well-known/openid-configuration on the app host itself
+  - id: rfc9116-security-txt
+    conforms: true
+    evidence: /.well-known/security.txt served on app.getmilana.ai (Expires field has lapsed — 2025-12-31)
+  - id: mcp-streamable-http
+    conforms: true
+    evidence: 'Hosted Model Context Protocol server at https://app.getmilana.ai/mcp, streamable HTTP transport (https://docs.getmilana.ai/guides/mcp)'
+  - id: npm-provenance-sigstore
+    conforms: true
+    evidence: 'milana-js published with signed provenance attestations recorded in the public Sigstore transparency log (https://docs.getmilana.ai/sdk/security)'
+  - id: llms-txt
+    conforms: true
+    evidence: llms.txt published at both https://getmilana.ai/llms.txt and https://docs.getmilana.ai/llms.txt
+  - id: rfc9457-problem-details
+    conforms: false
+    evidence: no public REST API surface documented

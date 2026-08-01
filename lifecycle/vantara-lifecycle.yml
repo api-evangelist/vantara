@@ -1,0 +1,28 @@
+generated: '2026-07-21'
+method: searched
+source: https://status.getmilana.ai/ + https://docs.getmilana.ai/llms.txt
+status_page: https://status.getmilana.ai/
+status_page_observed:
+  observed: '2026-07-21'
+  state: All systems operational
+  components:
+    - name: Milana App
+      uptime_90d: '99.959%'
+    - name: Milana Ingest
+      uptime_90d: '100%'
+  core_services_uptime: '99.98%'
+versioning:
+  scheme: semver
+  surface: milana-js npm SDK
+  current: 1.0.21
+deprecation:
+  policy_url: null
+  documented_deprecations:
+    - feature: SDK update() method
+      docs: https://docs.getmilana.ai/sdk/update
+      note: Documented as deprecated in favor of updateUser() and updateSession()
+sla: null
+notes: >-
+  Public status page (per-component 90-day uptime) linked from the getmilana.ai
+  footer. No published deprecation policy or SLA found; the only documented
+  deprecation is the SDK-level update() method.

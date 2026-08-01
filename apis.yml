@@ -1,20 +1,51 @@
 aid: vantara
-name: Vantara
-description: 'Vantara is a company surfaced as a portfolio company of homebrew and added to the API Evangelist
-  network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.'
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vantara.png
+name: Milana
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 17
+  pass: local-v1
+description: >-
+  Milana (formerly Vantara, a Homebrew-backed AI startup) is "the AI product
+  engineer" — it records user sessions through a lightweight open-source
+  browser SDK (milana-js) and uses vision AI to watch the replays, understand
+  what users came to do and whether they succeeded, and surface friction that
+  traditional analytics miss. Beyond the dashboard it exposes a hosted remote
+  MCP server so Claude, Cursor, ChatGPT, and other agents can search sessions,
+  trace user journeys, and run analyses, plus a GitHub codebase integration
+  that lets the Milana agent read code alongside session data and open pull
+  requests that ship fixes.
 url: https://raw.githubusercontent.com/api-evangelist/vantara/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - homebrew
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profile
+x-tier-reason: enriched-from-portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-- Ai
+- AI
+- Session Replay
+- Product Analytics
+- Developer Tools
+- Agents
+- SDK
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -22,5 +53,65 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/vantara-domain-security.yml
 - type: Website
+  url: https://getmilana.ai
+- type: FormerWebsite
   url: https://vantara.ai
+- type: Documentation
+  url: https://docs.getmilana.ai
+- type: APIReference
+  url: https://docs.getmilana.ai/sdk/overview
+- type: GettingStarted
+  url: https://docs.getmilana.ai/quickstart/js-package
+- type: Blog
+  url: https://getmilana.ai/blog
+- type: Support
+  url: https://docs.getmilana.ai/troubleshooting
+- type: Login
+  url: https://app.getmilana.ai
+- type: TermsOfService
+  url: https://getmilana.ai/terms
+- type: PrivacyPolicy
+  url: https://getmilana.ai/privacy
+- type: StatusPage
+  url: https://status.getmilana.ai/
+- type: GitHubOrganization
+  url: https://github.com/VantaraAI
+- type: LinkedIn
+  url: https://www.linkedin.com/company/milana-ai/
+- type: Twitter
+  url: https://x.com/getmilana
+- type: Careers
+  url: https://getmilana.ai/careers
+- type: Security
+  url: https://github.com/VantaraAI/milana-sdk/blob/main/SECURITY.md
+- type: LLMsTxt
+  url: llms/vantara-llms.txt
+- type: MCPServer
+  url: mcp/vantara-mcp.yml
+- type: Packages
+  url: packages/vantara-packages.yml
+- type: SDKs
+  url: packages/vantara-packages.yml
+- type: WellKnown
+  url: well-known/vantara-well-known.yml
+- type: SecurityTxt
+  url: well-known/vantara-security.txt
+- type: OAuthScopes
+  url: scopes/vantara-scopes.yml
+- type: Authentication
+  url: authentication/vantara-authentication.yml
+- type: Lifecycle
+  url: lifecycle/vantara-lifecycle.yml
+- type: Conformance
+  url: conformance/vantara-conformance.yml
+- type: VulnerabilityDisclosure
+  url: security/vantara-vulnerability-disclosure.yml
+- type: TrustCenter
+  url: security/vantara-trust-center.yml
+- type: AgentSkill
+  url: skills/vantara-install-milana.md
+- type: ChangeLog
+  url: changelog/vantara-changelog.yml

@@ -1,0 +1,29 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.getmilana.ai/guides/mcp
+status: published
+server:
+  name: milana
+  transport: http
+  protocol: streamable-http
+  url: https://app.getmilana.ai/mcp
+  authentication:
+    type: oauth2
+    authorization_server: https://clerk.getmilana.ai
+    metadata: well-known/vantara-oauth-authorization-server.json
+    dynamic_client_registration: true
+    note: Clients authenticate via an OAuth sign-in flow on first use (Claude Code /mcp Authenticate prompt, Cursor sign-in, ChatGPT connector OAuth flow).
+capabilities:
+  - Search recorded user sessions
+  - Look up users and trace user journeys
+  - Kick off Milana queries / deeper analyses against recorded user behavior
+clients_documented:
+  - Claude Code (claude mcp add --transport http milana https://app.getmilana.ai/mcp)
+  - Cursor (Settings -> MCP & Integrations -> Add new MCP server)
+  - ChatGPT (Connectors -> Create App)
+  - Claude Desktop (Settings -> Connectors -> Add custom connector)
+notes: >-
+  Official hosted remote MCP server published by Milana (formerly Vantara).
+  Tool inventory is only visible post-authentication, so individual tool
+  names are not cataloged here; capabilities above are as documented in the
+  MCP guide and https://getmilana.ai/llms.txt.

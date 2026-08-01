@@ -1,0 +1,39 @@
+generated: '2026-07-21'
+method: searched
+source: https://github.com/VantaraAI/milana-sdk/releases
+scheme: semver
+surface: milana-js browser SDK (GitHub releases; no separate product changelog page found)
+current_version: 1.0.21
+entries:
+  - version: v1.0.21
+    date: '2026-06-16'
+    breaking: false
+    highlights:
+      - Loosen engines.node to >=20; bump vite to 7.3.5
+  - version: v1.0.20
+    date: '2026-06-12'
+    breaking: false
+    highlights:
+      - Add unmaskClass option with milana-unmask default
+      - Force esbuild >=0.28.1 to clear GHSA-gv7w-rqvm-qjhr
+      - Replace asterisk text masking with layout-preserving placeholders
+  - version: v1.0.19
+    date: '2026-06-08'
+    breaking: false
+    highlights:
+      - Add privacy masking levels and mask/unmask selectors
+      - Strip stateful flags from a customer-provided RegExp blockClass before recording
+  - version: v1.0.18
+    date: '2026-06-04'
+    breaking: false
+    highlights:
+      - Persist user identity and session context across server-driven session restarts
+  - version: v1.0.17
+    date: '2026-06-01'
+    breaking: false
+    highlights:
+      - Milana SDK is now open source
+notes: >-
+  Dated releases are published on the open-source milana-sdk repository and
+  mirrored to npm (milana-js) with provenance attestations. Release cadence is
+  roughly weekly. No dated changelog for the Milana app itself was found.

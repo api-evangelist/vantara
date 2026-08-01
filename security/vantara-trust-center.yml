@@ -1,0 +1,15 @@
+generated: '2026-07-21'
+method: searched
+probe: true
+url: https://trust.getmilana.ai/
+platform: Vanta Trust Report
+certifications: []
+evidence:
+  - source: https://trust.getmilana.ai/
+    status: 200
+    title: Milana Trust Center
+    note: >-
+      Linked from the getmilana.ai footer; hosted Vanta trust report
+      (assets.vanta.com, report slug w3stce5tm6it2xigk5bz39). The report body is
+      client-rendered JavaScript, so named certifications could not be verified
+      without executing the page — none are recorded here rather than guessed.

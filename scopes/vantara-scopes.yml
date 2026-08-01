@@ -1,0 +1,42 @@
+generated: '2026-07-21'
+method: searched
+source: https://app.getmilana.ai/.well-known/oauth-authorization-server
+docs: https://clerk.com/docs/oauth/scoped-access
+notes: >-
+  Milana (formerly Vantara) publishes no OpenAPI, but its hosted MCP server at
+  https://app.getmilana.ai/mcp authenticates via OAuth 2.0 against the Clerk-run
+  authorization server at https://clerk.getmilana.ai. Scopes below are exactly
+  the scopes_supported list from the RFC 8414 authorization-server metadata.
+schemes:
+  - name: OAuth2
+    source: well-known/vantara-oauth-authorization-server.json
+    issuer: https://clerk.getmilana.ai
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://clerk.getmilana.ai/oauth/authorize
+        tokenUrl: https://clerk.getmilana.ai/oauth/token
+        pkce: S256
+        refresh_token: true
+        dynamic_client_registration: https://clerk.getmilana.ai/oauth/register
+scopes:
+  - scope: openid
+    description: OpenID Connect authentication (standard OIDC scope).
+    flows: [authorizationCode]
+  - scope: profile
+    description: Access to the user's profile claims (standard OIDC scope).
+    flows: [authorizationCode]
+  - scope: email
+    description: Access to the user's email address (standard OIDC scope).
+    flows: [authorizationCode]
+  - scope: public_metadata
+    description: Read the user's public metadata (Clerk scoped-access scope).
+    flows: [authorizationCode]
+  - scope: private_metadata
+    description: Read the user's private metadata (Clerk scoped-access scope).
+    flows: [authorizationCode]
+  - scope: offline_access
+    description: Issue a refresh token for long-lived access (standard OAuth scope).
+    flows: [authorizationCode]
+  - scope: 'user:org:read'
+    description: Read the user's organization membership (Clerk scoped-access scope).
+    flows: [authorizationCode]

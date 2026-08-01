@@ -1,0 +1,40 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.getmilana.ai/sdk/init + https://app.getmilana.ai/.well-known/oauth-authorization-server
+docs: https://docs.getmilana.ai/sdk/init
+summary:
+  types: [oauth2, apiKey]
+  oauth2_flows: [authorizationCode]
+  api_key_in: [client-side SDK config]
+schemes:
+  - name: mcp-oauth
+    type: oauth2
+    surface: MCP server (https://app.getmilana.ai/mcp)
+    issuer: https://clerk.getmilana.ai
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://clerk.getmilana.ai/oauth/authorize
+        tokenUrl: https://clerk.getmilana.ai/oauth/token
+        pkce: S256
+        scopes: 7
+    dynamic_client_registration: true
+    sources: [well-known/vantara-oauth-authorization-server.json]
+  - name: sdk-credentials
+    type: apiKey
+    surface: Browser recording SDK (milana-js)
+    credentials:
+      - name: productId
+        prefix: prd_
+        note: Identifies the product being recorded
+      - name: clientKey
+        prefix: key_
+        note: Publishable client key — documented as safe to include in client-side code
+    obtained_at: https://app.getmilana.ai/settings
+    sources:
+      - https://docs.getmilana.ai/sdk/init
+      - https://docs.getmilana.ai/quickstart/coding-agent
+notes: >-
+  No public REST API is documented; the programmatic surfaces are the browser
+  SDK (product ID + publishable client key) and the hosted MCP server (OAuth
+  2.0 authorization-code with PKCE via Clerk, including RFC 7591 dynamic
+  client registration for MCP clients).

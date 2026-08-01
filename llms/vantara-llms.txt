@@ -1,0 +1,28 @@
+# Milana
+
+## Docs
+
+- [BYO Storage](https://docs.getmilana.ai/guides/byo-storage.md): Keep session recordings in your own cloud storage bucket for full data residency control.
+- [BYO Cloud](https://docs.getmilana.ai/guides/byoc.md): Run Milana as a single-tenant install inside your own Google Cloud account.
+- [Canvas Recording](https://docs.getmilana.ai/guides/canvas-recording.md): Enable recording of HTML canvas elements in Milana session replays.
+- [Codebase Integration](https://docs.getmilana.ai/guides/codebase-integration.md): Connect your repositories so the Milana agent can read code alongside your session data.
+- [iframe Recording](https://docs.getmilana.ai/guides/iframe-recording.md): How Milana records same-origin and cross-origin iframe content.
+- [MCP Server](https://docs.getmilana.ai/guides/mcp.md): Connect Claude Code, Cursor, ChatGPT, and other AI tools to Milana through the Model Context Protocol.
+- [Privacy Controls](https://docs.getmilana.ai/guides/privacy.md): Block, mask, or ignore elements to control what Milana records in session replays.
+- [Feature-flagged Rollout](https://docs.getmilana.ai/guides/rollout.md): Roll out Milana to a subset of users using feature flags and deferred initialization.
+- [Introduction](https://docs.getmilana.ai/index.md)
+- [Coding Agent Setup](https://docs.getmilana.ai/quickstart/coding-agent.md): Copy a single prompt into your coding agent to install and configure Milana automatically.
+- [JavaScript Setup](https://docs.getmilana.ai/quickstart/js-package.md): Install the Milana SDK as an npm package.
+- [React Setup](https://docs.getmilana.ai/quickstart/react.md): Install the Milana SDK in a React app using MilanaProvider and hooks.
+- [Script Tag Setup](https://docs.getmilana.ai/quickstart/script-tag.md): Add Milana to any website with a script tag.
+- [Identify](https://docs.getmilana.ai/sdk/identify.md): Associate the current session with a known user using identify().
+- [Initialize](https://docs.getmilana.ai/sdk/init.md): Start a Milana recording session with your product ID, client key, and session info.
+- [SDK Overview](https://docs.getmilana.ai/sdk/overview.md): A reference for the Milana SDK — available as an npm package with React bindings and as a CDN script tag.
+- [Privacy Options](https://docs.getmilana.ai/sdk/privacy.md): Full reference for all privacy configuration options available in the Milana SDK.
+- [Security Posture](https://docs.getmilana.ai/sdk/security.md): How the Milana browser SDK is built, published, and maintained — open source, with a hardened supply chain and a minimal dependency footprint.
+- [Stop Recording](https://docs.getmilana.ai/sdk/stop-recording.md): End the current recording session immediately and allow a fresh session on the next init().
+- [Track Events](https://docs.getmilana.ai/sdk/track-events.md): Emit named events with optional attributes to mark important user actions in a session recording.
+- [Update (deprecated)](https://docs.getmilana.ai/sdk/update.md): Update user identity and session metadata using update().
+- [Update Session](https://docs.getmilana.ai/sdk/update-session.md): Push session-level context using updateSession().
+- [Update User](https://docs.getmilana.ai/sdk/update-user.md): Update profile fields for the session's user with updateUser().
+- [Troubleshooting & FAQ](https://docs.getmilana.ai/troubleshooting.md): Solutions to common problems and frequently asked questions about the Milana SDK and session recording.

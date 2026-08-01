@@ -1,0 +1,71 @@
+generated: '2026-07-21'
+method: searched
+source: probes of /.well-known/ on getmilana.ai hosts (Vantara rebranded to Milana; vantara.ai 301-redirects to getmilana.ai)
+hosts:
+  - host: https://app.getmilana.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        file: vantara-security.txt
+        note: RFC 9116; Expires field (2025-12-31) has lapsed but the file is still served
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: vantara-oauth-authorization-server.json
+        note: RFC 8414 metadata; issuer https://clerk.getmilana.ai (Clerk), PKCE S256, dynamic client registration
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://getmilana.ai
+    documents:
+      - path: /llms.txt
+        status: 200
+        file: ../llms/vantara-website-llms.txt
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://docs.getmilana.ai
+    documents:
+      - path: /llms.txt
+        status: 200
+        file: ../llms/vantara-llms.txt
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+  - host: https://vantara.ai
+    documents:
+      - path: /.well-known/security.txt
+        status: 301
+        note: vantara.ai 301-redirects all paths to https://getmilana.ai
+      - path: /.well-known/openid-configuration
+        status: 301
+      - path: /.well-known/oauth-authorization-server
+        status: 301
+      - path: /.well-known/oauth-protected-resource
+        status: 301
+      - path: /.well-known/api-catalog
+        status: 301
+      - path: /.well-known/ai-plugin.json
+        status: 301

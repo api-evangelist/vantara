@@ -1,0 +1,9 @@
+generated: '2026-07-21'
+method: searched
+skills:
+  - file: vantara-install-milana.md
+    name: Install and configure the Milana SDK in a codebase
+    api: https://docs.getmilana.ai/llms.txt
+    operations: [init, identify, updateUser, updateSession, trackEvent, stopRecording]
+    source: https://docs.getmilana.ai/quickstart/coding-agent
+    provenance: provider-published (saved verbatim)

@@ -1,0 +1,15 @@
+# Milana
+
+> Milana uses vision AI to watch session replays and understand what users came to a product to do — and whether they succeeded. It surfaces things traditional analytics cannot see, like users repeatedly tweaking workflows, silently dropping off mid-onboarding, or struggling with features that look fine in logs.
+
+## Documentation
+
+- [Docs](https://docs.getmilana.ai): SDK install, integrations, and API reference.
+
+## MCP
+
+Connect to Milana's remote MCP server to search sessions, trace user journeys, and run deeper analyses against recorded user behavior.
+See the [installation guide](https://docs.getmilana.ai/guides/mcp#install) for client-specific setup.
+
+- Endpoint: `https://app.getmilana.ai/mcp`
+- Transport: streamable HTTP

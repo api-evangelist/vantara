@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: https://registry.npmjs.org/milana-js + https://docs.getmilana.ai/sdk/overview
+packages:
+  - language: javascript
+    registry: npm
+    name: milana-js
+    url: https://www.npmjs.com/package/milana-js
+    install: npm install milana-js
+    official: true
+    license: MIT
+    latest: 1.0.21
+    latest_published: '2026-06-16'
+    first_published: '2026-02-27'
+    repository: https://github.com/VantaraAI/milana-sdk
+    notes: >-
+      Core browser SDK (init, identify, updateUser, updateSession, trackEvent,
+      stopRecording) with React bindings at milana-js/react (MilanaProvider,
+      useMilana, useMilanaOptional). Published with npm provenance attestations
+      (Sigstore) via OIDC trusted publishing.
+  - language: javascript
+    registry: cdn
+    name: milana.js
+    url: https://cdn.getmilana.ai/milana.js
+    install: '<script async src="https://cdn.getmilana.ai/milana.js"></script>'
+    official: true
+    notes: Script-tag distribution of the same SDK for non-bundled sites (window._milanaQueue shim).
